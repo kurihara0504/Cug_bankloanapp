@@ -1,0 +1,477 @@
+@charset "utf-8";
+/* アイコン系 */
+.ao_png {
+	position: relative;
+	top: 3px;
+	width: 16px;
+	margin-left: 36px;
+}
+
+.login1_png {
+	position: relative;
+	top: 4px;
+	width: 20px;
+	margin-right: 17px;
+}
+
+.password_button {
+	position: relative;
+	left: 20px;
+	border: none; /* 枠線を消す */
+	outline: none; /* クリックしたときに表示される枠線を消す */
+	background: transparent; /* 背景の灰色を消す */
+	width: 20px;
+}
+
+/* フォーム */
+.login_form {
+  margin-top: 30px;
+}
+
+.mdl-textfield__input {
+	border: none;
+	outline: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+	/* display: block; */
+	font-size: 16px;
+	font-family: "Noto Sans Japanese", "Helvetica", "Arial", sans-serif;
+	margin: 0;
+	padding-bottom: 9px;
+	/* 後でスマホ対応 */
+	width: 400px;
+	background: none;
+	text-align: left;
+	color: inherit;
+	margin-bottom: 32px;
+}
+
+.mdl-textfield__input_icon {
+	width: 400px;
+}
+
+.login1_form {
+	margin-top: 128px;
+}
+
+.login2_form {
+	margin-top: 63px;
+}
+
+input::placeholder {
+	color: #CCCCCC;
+}
+
+/* IE */
+input:-ms-input-placeholder {
+	color: #CCCCCC;
+}
+
+/* Edge */
+input::-ms-input-placeholder {
+	color: #CCCCCC;
+}
+
+#login_pass1 {
+	margin-bottom: 0;
+}
+
+#login_pass2 {
+	margin-bottom: 0;
+}
+/* ログインボタン */
+.login-button {
+	width: 240px;
+	height: 50px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 25px;
+	border: none;
+	color: #B3B3B3;
+	background-color: #b20d0e;
+	color: #fff;
+}
+
+.login-button:disabled {
+	width: 240px;
+	height: 50px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #E6E6E6;
+	border-radius: 25px;
+	border: none;
+	color: #B3B3B3;
+}
+
+/* ログアウトボタン */
+.logout-button {
+	width: 200px;
+	height: 46px;
+	font-size: 16px;
+	color: #000;
+	background-color: #fff;
+	border-radius: 23px;
+	border: 1px solid #ccc;
+	margin: 13px auto 0;
+}
+
+/* ダイアログボタン */
+.dialog-button {
+	margin: 10px;
+	width: 200px;
+	height: 50px !important;
+	font-size: 16px;
+	color: #000;
+	background-color: #fff;
+	border-radius: 25px;
+	border: 1px solid #ccc;
+}
+
+.login-tab_border {
+	width: 1px;
+	height: 100%;
+	background-color: #F2F2F2;
+}
+
+.btn-txt-policy {
+	line-height: 16px;
+	margin-bottom: 10px;
+}
+
+/* 青字ボタン */
+.ao-button {
+	background: transparent;
+	border: none;
+	border-radius: 2px;
+	color: #2196F3;
+	position: relative;
+	margin: 0;
+	min-width: 64px;
+	padding: 0 20px;
+	display: inline-block;
+	font-family: "Noto Sans Japanese", "Roboto", "Helvetica", "Arial",
+		sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 1;
+	letter-spacing: 0;
+	overflow: hidden;
+	will-change: box-shadow;
+	transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color
+		0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s
+		cubic-bezier(0.4, 0, 0.2, 1);
+	outline: none;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	line-height: 36px;
+	vertical-align: middle;
+}
+/* ���������p  */
+.margin35_30 {
+	margin: 35px;
+	margin-bottom: 30px;
+}
+
+.mdl-ripple {
+	background: rgb(0, 0, 0);
+	border-radius: 50%;
+	height: 50px;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 50px;
+	overflow: hidden;
+}
+
+.mdl-ripple.is-animating {
+	transition: width 0.3s cubic-bezier(0, 0, 0.2, 1), height 0.3s
+		cubic-bezier(0, 0, 0.2, 1), opacity 0.6s cubic-bezier(0, 0, 0.2, 1),
+		-webkit-transform 0.3s cubic-bezier(0, 0, 0.2, 1);
+	transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1), width 0.3s
+		cubic-bezier(0, 0, 0.2, 1), height 0.3s cubic-bezier(0, 0, 0.2, 1),
+		opacity 0.6s cubic-bezier(0, 0, 0.2, 1);
+	transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1), width 0.3s
+		cubic-bezier(0, 0, 0.2, 1), height 0.3s cubic-bezier(0, 0, 0.2, 1),
+		opacity 0.6s cubic-bezier(0, 0, 0.2, 1), -webkit-transform 0.3s
+		cubic-bezier(0, 0, 0.2, 1);
+}
+
+.mdl-tabs {
+	display: block;
+	width: 100%;
+}
+
+.mdl-tabs__tab-bar {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-content: space-between;
+	-ms-flex-line-pack: justify;
+	align-content: space-between;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	height: 61px;
+	padding: 0 0 0 0;
+	margin: 0;
+	border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.mdl-tabs__tab {
+	width: 100%;
+	margin: 0;
+	border: none;
+	padding: 0 -24px 0 -24px;
+	float: left;
+	position: relative;
+	display: block;
+	text-decoration: none;
+	height: 61px;
+	line-height: 61px;
+	text-align: center;
+	font-weight: 500;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.54);
+	overflow: hidden;
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active {
+	color: #b20d0e;
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
+	height: 2px;
+	width: 100%;
+	display: block;
+	content: " ";
+	bottom: 0px;
+	left: 0px;
+	position: absolute;
+	background: #b20d0e;
+	-webkit-animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) 0.01s
+		alternate forwards;
+	animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) 0.01s
+		alternate forwards;
+	transition: all 1s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.mdl-tabs__tab .mdl-tabs__ripple-container {
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.mdl-tabs__tab .mdl-tabs__ripple-container .mdl-ripple {
+	background: rgb(63, 81, 181);
+}
+
+/* ���O�C���^�u */
+.mdl-tabs__panel {
+	text-align: center;
+	display: block;
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__panel {
+	display: none;
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__panel.is-active {
+	display: block;
+}
+
+.mdl-textfield__label {
+	bottom: 0;
+	color: rgba(0, 0, 0, 0.26);
+	font-size: 16px;
+	pointer-events: none;
+	position: absolute;
+	display: block;
+	top: 24px;
+	width: 80%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: left;
+	padding: 0px 0px 0px 10px;
+}
+
+.mdl-textfield--floating-label .mdl-textfield__label {
+	transition-duration: 0.2s;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-focused .mdl-textfield__label, .mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
+	.mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
+	color: rgb(63, 81, 181);
+	font-size: 12px;
+	top: 4px;
+	visibility: visible;
+}
+
+.mdl-textfield__label:after {
+	background-color: rgb(63, 81, 181);
+	bottom: 20px;
+	content: '';
+	height: 2px;
+	left: 45%;
+	position: absolute;
+	transition-duration: 0.2s;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	visibility: hidden;
+	width: 10px;
+}
+
+.mdl-textfield.is-focused .mdl-textfield__label:after {
+	left: 0;
+	visibility: visible;
+	width: 100%;
+}
+
+/* ���O�C�� */
+.loginPage {
+	background-color: #FFFFFF;
+	margin: auto;
+	max-width: 1000px;
+	height: 570px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.passView {
+	font-size: 12px;
+	float: right;
+}
+
+/* --------�|�b�v�A�b�v�ݒ�------------------------------------------ */
+.mdl-dialog {
+	border: none;
+	width: 580px;
+}
+
+.mdl-dialog::backdrop {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.mdl-dialog__title {
+	padding: 42px 24px 0;
+	margin: 0;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.mdl-dialog__actions {
+	padding: 8px 8px 8px 24px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	-webkit-flex-direction: row-reverse;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.mdl-dialog__actions>* {
+	text-align: center;
+}
+
+.mdl-dialog__actions>*:first-child {
+	margin-right: 0;
+}
+
+.mdl-dialog__actions--full-width {
+	padding: 0 0 8px 0;
+}
+
+.mdl-dialog__actions--full-width>* {
+	height: 48px;
+	-webkit-flex: 0 0 100%;
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%;
+	padding-right: 16px;
+	margin-right: 0;
+	text-align: right;
+}
+
+.mdl-dialog__content {
+	padding: 20px 24px 0px 24px;
+	color: rgba(0, 0, 0,);
+}
+/* ------------------------------------------------------------- */
+
+/*-- スマホ版表示CSS  --*/
+@media screen and (max-width: 700px) {
+	.mdl-textfield__input, .mdl-textfield__input_icon {
+		width: 75%;
+	}
+	.login1_form {
+		margin-top: 80px;
+	}
+	.loginPage {
+		border-radius: 5px;
+	}
+	.mdl-dialog {
+		width: 75%;
+	}
+}
+/*-- スマホ版表示CSS小  --*/
+@media screen and (max-width: 400px) {
+	.mdl-tabs__tab, .mdl-textfield__input, .ao-button {
+		font-size: 14px;
+	}
+	.login-button:disabled {
+		width: 150px;
+		height: 40px;
+		font-size: 12px;
+		font-weight: bold;
+		background-color: #E6E6E6;
+		border-radius: 20px;
+		border: none;
+		color: #B3B3B3;
+	}
+	.login-button {
+		width: 150px;
+		height: 40px;
+		font-size: 12px;
+		font-weight: bold;
+		border-radius: 20px;
+		border: none;
+		color: #B3B3B3;
+		background-color: #b20d0e;
+		color: #fff;;
+	}
+	.icon-pass {
+		font-size: 18px;
+	}
+	.mdl-dialog__title {
+		font-size: 18px;
+	}
+	.mdl-dialog__title p {
+		font-size: 12px;
+	}
+	.dialog-button {
+		margin: 10px;
+		width: 200px;
+		height: 46px !important;
+		font-size: 12px;
+		color: #000;
+		background-color: #fff;
+		border-radius: 23px;
+		border: 1px solid #ccc;
+	}
+}

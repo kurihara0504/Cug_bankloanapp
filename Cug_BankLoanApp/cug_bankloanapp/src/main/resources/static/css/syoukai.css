@@ -1,0 +1,242 @@
+@charset "utf-8";
+
+.syoukai_main {
+	padding-top: 90px;
+	padding-left: 140px;
+	padding-right: 140px;
+}
+
+/* 種類タブ*/
+.swiper-slide {
+	width: 14%;
+	min-width: 120px;
+	height:60px;
+	margin:0 2px;
+	float: left;
+	border: none;
+	position: relative;
+	display: grid;
+	place-items: center center;
+	text-decoration: none;
+	text-align: center; 
+	font-weight: 500;
+	font-size: clamp(12px, 1.5vw, 14px);
+	background: #ddd;
+	color: rgba(0, 0, 0, 0.54);
+	overflow: hidden;
+	cursor:pointer;
+}
+
+/*選択中種類タブ*/
+.swiper-slide.is-active {
+	background:#b20d0e;
+	color:white;
+}
+
+/* 種類タブ矢印カスタマイズ */
+.swiper-button-prev,.swiper-button-next {
+	width: 2%;
+	max-width: 27px;
+	min-width: 18px;
+}
+	
+.swiper-button-prev:before,.swiper-button-next:before {
+	content: "";
+	bottom: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	position: absolute;
+	box-sizing: border-box;
+	background:#fff;
+}
+
+.swiper-button-prev:after,.swiper-button-next:after {
+	content: "";
+	bottom: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	margin: auto;
+	position: absolute;
+	box-sizing: border-box;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+
+.swiper-button-prev:after{
+	border-right: 10px solid #ddd;
+
+}
+.swiper-button-next:after {
+	border-left: 10px solid #ddd;
+}
+
+.syoukai p {
+	padding: 20px 30px;
+}
+
+.syoukai td {
+	text-align: center;
+	vertical-align: middle;
+	border-right: 1px solid #E6E6E6;
+	background-color: #FFF;
+	min-width: 150px;
+}
+
+/* 帳票一覧画面の横幅調整 */
+.syoukai td:nth-child(1) {
+	width: 150px;
+	border-radius: 5px 0 0 5px;
+	min-width: 130px;
+}
+
+.syoukai td:nth-child(2) {
+	min-width: 83px;
+}
+
+.syoukai td:nth-child(3) {
+	text-align: inherit;
+	width: 300px;
+	min-width: 120px;
+}
+
+.syoukai td:nth-child(4) {
+	text-align: inherit;
+	width: 300px;
+	min-width: 145px;
+}
+
+.syoukai td:nth-child(5) {
+	text-align: inherit;
+	min-width: 135px;
+	width: 363px;
+}
+
+/* 帳票一覧画面の角丸調整 */
+.syoukai td:nth-child(1) {
+	border-radius: 5px 0 0 5px;
+}
+
+.button-th {
+	vertical-align: middle;
+	border-radius: 0 5px 5px 0;
+	background-color: #FFF;
+}
+
+.reportcss {
+	height: 80px !important;
+	margin-bottom: 15px !important;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+
+
+/* PDFダウンロードボタン */
+.pdf-button {
+	width: 78px;
+	height: 30px;
+	font-size: 14px;
+	color: #000;
+	background-color: #fff;
+	border-radius: 15px;
+	border: 1px solid #b20d0e;
+	margin: 0 10px;
+}
+
+/*-- スマホ版表示CSS  --*/
+@media screen and (max-width: 1000px) {
+  .syoukai_main {
+		padding-left: 5%;
+		padding-right: 5%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .syoukai p {
+		padding: 20px 15px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+	.syoukai span {
+		font-weight: bold;
+		display: inline;
+	}
+	.syoukai table {
+		width: 100%;
+	}
+	.syoukai td {
+		display: block;
+		text-align: left;
+		width: 100%;
+		text-align: left;
+		border-right: none;
+	}
+	.syoukai td:nth-child(1) {
+		width: 100%;
+		padding-top: 10px;
+		border-radius: 5px 0 0 0;
+	}
+	.syoukai td:nth-child(3) {
+		text-align: inherit;
+		padding-left: 0px;
+		width: 100%;
+	}
+	.syoukai td:nth-child(4) {
+		text-align: inherit;
+		padding-left: 0px;
+		border-radius: none;
+		width: 100%;
+	}
+	.syoukai td:nth-child(5) {
+		text-align: inherit;
+		padding-left: 0px;
+		border-radius: none;
+		width: 100%;
+		padding-bottom: 10px;
+		border-radius: 0 0 0 5px;
+	}
+	.syoukai p {
+		padding: 0px 0px;
+		padding-right: 45px;
+		padding-left: 15px;
+		line-height: 25px;
+		border-right: 1px solid #E6E6E6;
+		text-align: left;
+	}
+	.syoukai_main {
+		padding-top: 80px;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.pdf-button {
+		width: 60px;
+		height: 26px;
+		font-size: 14px;
+		color: #000;
+		background-color: #fff;
+		border-radius: 13px;
+		margin: 0 7px;
+		border: 1px solid #b20d0e;
+	}
+	.pc-area-formlist {
+		display: none;
+	}	
+	.swiper-slide{
+		width: 32%;
+		margin: 0 1px;
+		min-width: 100px;
+	}
+	.swiper-button-prev,.swiper-button-next {
+		width: 4%;
+	}
+	.swiper-button-prev{
+		left: 5px;
+	}
+	.swiper-button-next{
+		right: 5px;
+	}
+}

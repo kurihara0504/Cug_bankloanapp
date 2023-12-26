@@ -1,0 +1,383 @@
+@charset "utf-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+:root {
+  /* ie11ではcss変数不可のため、以下は情報として記載 */
+  /* 中国銀行オリジナルカラー   */
+  --original-color: #b20d0e;
+  /* WEBイメージカラー1  */
+  --back-color: #F2F2F2;
+  /* WEBイメージカラー2  */
+  --main-color: #FFFFFF;
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+
+/* change colours to suit your needs */
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+
+/* change colours to suit your needs */
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-spacing: 0;
+}
+
+
+/* change border colour to suit your needs */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+html {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1em;
+  line-height: 1.4;
+  width: 100%;
+  height: 100%;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  background: #F2F2F2;
+}
+
+html, body {
+  font-family: 'Noto Sans JP', "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+main {
+  padding: 50px 5% 30px 5%;
+  display: block;
+  margin-top: 120px;
+}
+
+
+/* ヘッダー */
+
+header {
+  background: #FFFFFF;
+}
+
+.mypost_title {
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+/* ログアウトバナー */
+.banner{
+	text-align: center;
+}
+
+.banner img{
+	width: 320px;
+	height: 50px;
+	background: #FFFFFF;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+/* ボタン */
+
+button {
+  outline: 0;
+  cursor: pointer;
+}
+
+button:active {
+  filter: brightness(90%);
+}
+
+.hed_t {
+  text-align: left;
+  padding: 10px 0px 10px 72px;
+}
+
+.hed_t img {
+  width: 160px;
+}
+
+.mypost {
+  font-weight: 900;
+  /* font-size: 20px; */
+  /* color: #000000; */
+  padding: 5px, 30px, 0px, 30px;
+  text-align: center;
+  top: 91px;
+  /* left: 557px; */
+  /* width: 166px; */
+  height: 28px;
+  text-align: center;
+  font: Bold 20px/27px Noto Sans JP;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+hr {
+  display: block;
+  height: 2px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  /* margin: 1em 0; */
+  padding: 0;
+  margin: 0;
+}
+
+
+/* 画面名 */
+
+.screenTitle {
+  display: block;
+  padding: 11px;
+  text-align: center;
+  font: Bold 20px/27px Noto Sans;
+  letter-spacing: 0px;
+  color: #000000;
+  font-family: "Noto Sans Japanese","Helvetica", "Arial", sans-serif;
+}
+
+
+/*ログインに移動  */
+
+.loginPage {
+  background-color: #FFFFFF;
+  margin: auto;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+.mdl-textfield__input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  /* display: block; */
+  font-size: 16px;
+  font-family: "Noto Sans Japanese", "Helvetica", "Arial", sans-serif;
+  margin: 0;
+  padding: 4px 0;
+  width: 40%;
+  background: none;
+  text-align: left;
+  color: inherit;
+}
+
+.top_p{
+	margin-bottom: 10px;
+}
+
+#window_close{
+   display: block;
+   margin: auto;
+   margin-top: 60px;
+   width: 280px;
+   height: 60px;
+   font-size: 16px;
+   color: #000;
+   background-color: #fff;
+   border-radius: 30px;
+   border: 0.5px solid #ccc;
+}
+
+
+
+
+/*-- PC版表示CSS  --*/
+
+.phone_area {
+  display: none;
+}
+
+#phone_area {
+  display: none;
+}
+
+
+/* ブラウザ別対応 */
+
+
+/* IE11 */
+
+_:-ms-lang(x)::-ms-backdrop, .mdl-textfield__input_icon {
+  display: none;
+}
+
+/* Edge */
+@supports (-ms-ime-align: auto) {
+  .mdl-textfield__input_icon {
+    display: none;
+  }
+}
+
+/*-- スマホ版表示CSS  --*/
+@media screen and (max-width: 750px) {
+  #pc_area {
+    display: none;
+  }
+
+  .pc_area {
+    display: none;
+  }
+
+  #phone_area {
+    display: block;
+  }
+  .phone_area {
+    display: block;
+  }
+
+  main {
+    padding: 30px 5% 30px 5%;
+    display: block;
+}
+
+  /*-- ヘッダー  --*/
+
+  .screenTitle {
+    padding: 5px;
+    font: Bold 15px/27px Noto Sans;
+    font-family: "Noto Sans Japanese","Helvetica", "Arial", sans-serif;
+  }
+
+  .hed_t {
+    padding: 5px 0px 0px 72px;
+  }
+
+  .hed_t img {
+    width: 150px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+  /* ログアウトバナー */
+.banner{
+	text-align: center;
+}
+
+.banner img{
+	width: 320px;
+	height: 50px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+}
+
+
+    #window_close {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    width: 200px;
+    height: 44px;
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 22px;
+    border: 0.5px solid #ccc;
+}
+}
+
+@media screen and (max-width: 400px) {
+	p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+	.banner img{
+	  width: 288px;
+	  height: 45px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+	.banner img{
+	  width: 250px;
+	  height: 39px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+	.banner img{
+	  width: 250px;
+	  height: 39px;
+    }
+}
+

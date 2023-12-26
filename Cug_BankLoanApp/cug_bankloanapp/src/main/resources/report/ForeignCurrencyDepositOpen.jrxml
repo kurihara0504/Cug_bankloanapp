@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TimeDepositNotice" pageWidth="842" pageHeight="595" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eae8d221-763d-4660-b86a-e8db514ef413">
+	<parameter name="issuedDate" class="java.lang.String"/>
+	<parameter name="applicantName" class="java.lang.String"/>
+	<parameter name="productName" class="java.lang.String"/>
+	<parameter name="transactionName" class="java.lang.String"/>
+	<parameter name="reportType" class="java.lang.String"/>
+	<parameter name="continuationType" class="java.lang.String"/>
+	<parameter name="depositNumber" class="java.lang.String"/>
+	<parameter name="currencyCode" class="java.lang.String"/>
+	<parameter name="depositAmount" class="java.lang.String"/>
+	<parameter name="depositDate" class="java.lang.String"/>
+	<parameter name="maturityDate" class="java.lang.String"/>
+	<parameter name="periodMonths" class="java.lang.String"/>
+	<parameter name="periodDays" class="java.lang.String"/>
+	<parameter name="interestRate" class="java.lang.String"/>
+	<parameter name="taxClass" class="java.lang.String"/>
+	<parameter name="principalAndInterestHandling1" class="java.lang.String"/>
+	<parameter name="principalAndInterestHandling2" class="java.lang.String"/>
+	<parameter name="branchName" class="java.lang.String"/>
+	<parameter name="branchPhoneNumber" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<group name="「外貨定期預金」 お預入れのご案内">
+		<groupHeader>
+			<band height="50">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<staticText>
+					<reportElement x="-20" y="25" width="842" height="19" uuid="60627388-dccb-4775-91fc-314f15f1b074">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font fontName="IPAexg" size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[「外貨定期預金」 お預入れのご案内 (兼契約締結時交付書面)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="644" y="0" width="40" height="20" uuid="d61da5df-c36e-40c6-8736-f4bbfada9f81"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<text><![CDATA[作成日]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="684" y="0" width="84" height="20" uuid="0e34c173-1d33-41ad-b5fb-071e1dfac475">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="IPAexg"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{issuedDate}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Group1"/>
+	<group name="固定文言">
+		<groupHeader>
+			<band height="35">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<staticText>
+					<reportElement x="37" y="5" width="589" height="30" uuid="eab651b8-7401-4c98-bd3e-9b8c72611a43">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement markup="none">
+						<font fontName="IPAexg"/>
+					</textElement>
+					<text><![CDATA[いつも中国銀行をご利用いただきありがとうございます。 先日お預入れいただきました外貨定期預金の内容をご確認ください。
+今後とも、引続きお引立ていただきますよう心からお願い申しあげます。
+]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="名義人">
+		<groupHeader>
+			<band height="40">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<staticText>
+					<reportElement x="37" y="0" width="42" height="24" uuid="7a3965f1-32e5-478f-93c6-ddc59197f0eb">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="IPAexg"/>
+					</textElement>
+					<text><![CDATA[名義人]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="79" y="0" width="677" height="24" uuid="b98f721c-55d5-4349-ade5-e573d4152d50">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="IPAexg"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{applicantName}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="詳細情報">
+		<groupHeader>
+			<band height="105">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<frame>
+					<reportElement x="37" y="0" width="728" height="96" uuid="4b6fb769-3c70-4267-962f-c401588e96cf">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<frame>
+						<reportElement x="0" y="0" width="140" height="24" uuid="813a5093-baf0-4177-86d5-e0092cffb9e8">
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<staticText>
+							<reportElement x="0" y="0" width="140" height="24" uuid="5958e064-170f-47bc-9e21-736b5a47a3ed"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<text><![CDATA[商品名]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="24" width="140" height="24" uuid="5019fbfd-5a2b-4998-b875-4dffae6ecd65">
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="140" height="24" uuid="9b6a6546-6b32-48e9-88f4-c429e0475a2f">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{productName}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="140" y="0" width="70" height="24" uuid="0d75bf54-3fb8-4198-9d20-2946c6f31489">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<staticText>
+							<reportElement x="0" y="0" width="70" height="24" uuid="c9909793-3500-4109-b390-1cb6129d2131">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<text><![CDATA[取引名]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="140" y="24" width="70" height="24" uuid="9bbd8d61-e4b0-4e68-bee0-aa5acb77a528">
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="24" uuid="667e3bdf-0e26-4475-b7fc-76a404da7bb6">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{transactionName}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="210" y="0" width="45" height="24" uuid="09661b90-941b-4949-887b-ddeda41ae514">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<staticText>
+							<reportElement x="0" y="0" width="45" height="24" uuid="29b62c6a-b00c-42d7-a7c5-53c71018113b">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<text><![CDATA[種類]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="210" y="24" width="45" height="24" uuid="73b30d8f-d71d-4033-8a42-9fd3684a626e">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="45" height="24" uuid="88a70c45-d1f7-4a45-ae3d-7a1338b9cce8">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{reportType}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="255" y="0" width="70" height="24" uuid="b2f6f871-3c47-4c29-bd86-8c1ae3ea6de2">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<staticText>
+							<reportElement x="0" y="0" width="70" height="24" uuid="ab113e38-8874-44d3-8dd4-c433247d3f54">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<text><![CDATA[継続区分]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="255" y="24" width="70" height="24" uuid="0d1f7642-026e-48e1-a542-c6a172553f25">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="24" uuid="a04dcfcf-ade4-4189-b803-c633460b09c2">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{continuationType}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="325" y="24" width="60" height="24" uuid="349e1443-e5e7-4b13-ad5c-27e85bbde37b">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="60" height="24" uuid="0f6d0c81-ba57-4d3d-8208-557f0da0dd85">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{depositNumber}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="325" y="0" width="60" height="24" uuid="83ccbacf-7030-45ae-8c0a-fd4b4a69381c">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<staticText>
+							<reportElement x="0" y="0" width="60" height="24" uuid="92c944a8-fc97-4786-9706-7a23d9e94f09">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<text><![CDATA[お預り番号]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="385" y="0" width="45" height="24" uuid="56e73ba7-1489-4a0d-a0e2-c03734f6534f">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<staticText>
+							<reportElement x="0" y="0" width="45" height="24" uuid="0f99a623-7e4f-4a4b-8428-f727ab2c71cc">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<text><![CDATA[幣種]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="385" y="24" width="45" height="24" uuid="bc23b944-671b-4cf2-8c78-3d5973d1e7af">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="45" height="24" uuid="dc0ef48c-7295-4be0-8f41-9d03419c8516">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{currencyCode}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="430" y="0" width="120" height="24" uuid="e9ee6cbe-43df-41b9-b590-ce1a2f95a12e">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<staticText>
+							<reportElement x="0" y="0" width="120" height="24" uuid="2dfc04b2-162a-410d-bc88-1ab9b1858927">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<text><![CDATA[お預り金額]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="430" y="24" width="120" height="24" uuid="3420088d-9430-422c-9d24-3abbebc7f239">
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="120" height="24" uuid="2a65dc35-78be-4968-8aa9-0fa3bad1ceae">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{depositAmount}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="550" y="24" width="89" height="24" uuid="c5e69ab2-1b43-47eb-8f45-1931aa8704c4">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="89" height="24" uuid="10bc12e0-aac3-4f2b-a37d-227deffd82a6">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{depositDate}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="550" y="0" width="89" height="24" uuid="4fc3e9fc-4d8a-4c11-9855-ca484c506f5d">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<staticText>
+							<reportElement x="0" y="0" width="89" height="23" uuid="7d9744eb-87bd-4d3c-bf40-2968402a05a6">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<text><![CDATA[お預入れ日]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="639" y="24" width="89" height="24" uuid="ac8595c1-b25e-4e44-b577-c108615527e1">
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="89" height="24" uuid="a556d1f6-2b97-483e-a05b-c121f3af2c4d">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{maturityDate}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="639" y="0" width="89" height="24" uuid="9877791d-53d1-4975-b954-bcf23351cd65">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<staticText>
+							<reportElement x="0" y="0" width="89" height="23" uuid="aba2b191-9397-4be6-bdd0-48461c3b52ad">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<text><![CDATA[満期日]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="72" width="70" height="24" uuid="30fa3ed5-974a-4418-b5d5-c58aef8cb807">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<staticText>
+							<reportElement x="0" y="12" width="70" height="12" uuid="cbec03b5-3eb4-49fa-a76d-51903c36ebbf">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<text><![CDATA[（　　　）]]></text>
+						</staticText>
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="12" uuid="14a3b9bd-84b9-43e9-aaee-74e58e67a92f">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{periodMonths}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="12" width="70" height="12" uuid="1a457c01-ca3b-4fca-8cc9-8488f1177138">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{periodDays}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="48" width="70" height="24" uuid="e7eb5ada-71a0-468f-8676-db7ff53f4358">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<staticText>
+							<reportElement x="0" y="0" width="70" height="24" uuid="8de02dad-4619-4b04-8b4b-53be13edb572">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<text><![CDATA[期間]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="70" y="72" width="70" height="24" uuid="91078147-478c-4f97-84fd-292a94cc1594">
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="24" uuid="a7388495-468e-4bed-8541-8d5a0098688f">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{interestRate}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="70" y="48" width="70" height="24" uuid="519b3b8d-a012-4015-9553-517d7cb5b5fd">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<staticText>
+							<reportElement x="0" y="0" width="70" height="24" uuid="490503b3-9ee3-4ddd-8c83-b242531f932f">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<text><![CDATA[年利]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="140" y="72" width="70" height="24" uuid="7063b722-1944-4629-af13-f9fe9a9f5f94">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="24" uuid="aa1ba0e5-c214-4a2f-9223-da9a3468f342">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{taxClass}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="140" y="48" width="70" height="24" uuid="bf0a760c-cff1-46ee-9780-d40818754d13">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<staticText>
+							<reportElement x="0" y="0" width="70" height="24" uuid="462cc8fc-ada2-4dc3-8e8a-5e51b9a43892">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<text><![CDATA[税区分]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="210" y="48" width="518" height="24" uuid="eba0eaa6-6bf5-401f-bbcb-720c27f182e7">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<staticText>
+							<reportElement x="6" y="0" width="512" height="24" uuid="75fe4cc4-9620-466e-9d86-44ff9dc1799c">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<text><![CDATA[元金・利息のお取り扱い]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="210" y="72" width="518" height="24" uuid="5061c490-b296-466a-93a9-6ac8569e5052">
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement x="6" y="0" width="512" height="12" uuid="ff1fc807-b288-493c-b858-b81f307dd2ee">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{principalAndInterestHandling1}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="6" y="12" width="512" height="12" uuid="6414d206-8e23-42b8-805d-3240d1f4fcee">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							</reportElement>
+							<textElement verticalAlignment="Middle" markup="none">
+								<font fontName="IPAexg"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{principalAndInterestHandling2}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="お知らせ">
+		<groupHeader>
+			<band height="270">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<staticText>
+					<reportElement x="37" y="10" width="720" height="255" uuid="6f4476c2-7374-41cf-83aa-e59ffea6eb44">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+						<font fontName="IPAexg"/>
+					</textElement>
+					<text><![CDATA[◯預金保険について
+　・外貨預金は預金保険の対象ではありません。
+◯払戻方法について
+　・満期日以降に一括して払戻いたします。
+◯利息について
+　・お預入れの時の金利を満期日まで適用し、 原則として、付利単位を１通貨単位とした１年を３６５日とする日割計算により計算します。
+　・利息は満期日以降に一括してお支払いいたします。
+◯中途解約時のお取扱いについて
+　・外貨定期預金は、 自動継続後も含め原則として中途解約できません。 当行がやむを得ないと認めて満期日前に解約する場合、 その利息は当行所定の中途解
+　　約利率を適用します。 また、中途解約時の金利情勢などによってはペナルティ （違約金） がかかる場合があります。
+　・為替予約付外貨定期預金の中途解約時には、別途手数料が必要になります。
+◯税金について
+　・利子所得は法人のお客さまは総合課税、 個人のお客さまは源泉分離課税（国税１５%、地方税５%） として課税されます。
+　・平成２５年１月１日より所得税（国税）には復興特別所得税（所得税１５% × ２．１% = ０．３１５%） が追加で課税されます。
+◯外貨預金お預入れ（口座開設）時および払戻（解約）時の為替手数料について
+　・円を外貨にする際（預入時） および外貨を円にする際（払戻・解約時）は手数料（たとえば、１米ドルあたり片道１円 ・ 往復２円、１ユーロあたり片道
+　　１円５０銭 ・ 往復３円）がかかります。
+　　（お預入れおよび払戻・解約の際は手数料分を含んだ為替相場である当行所定のTTSレート（預入時）、TTBレート （払戻・ 解約時） を適用します。）
+　・したがって、為替相場の変動がない場合でも、 往復の為替手数料 （たとえば、1米ドルあたり2円、１ユーロあたり3円）がかかるため、 お受取の外貨元
+　　利金の満期日時点での円換算額が当初外貨預金預入時の払込み円貨額を下回る（円ベースで元本割れとなる） リスクがあります。
+　・なお、インターネットバンキングでのお預入れ時の場合、 為替手数料を５０銭優遇したものを適用しております（人民元は除きます）。
+　　為替手数料５０銭優遇についてはお預入れ時のみ適用であり、 払戻・ 解約時の為替手数料の優遇はありません。
+　　またキャンペーン期間中の為替手数料についてはこの限りではありません。
+◯満期日以降の運用方法、 またご不明な点につきましては、 下記の取扱店へお気軽にお問い合わせください。]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageFooter>
+		<band height="55">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="37" y="3" width="38" height="19" uuid="6089c740-7b41-4054-8cda-e8bc49d3ac33">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="IPAexg" size="10"/>
+				</textElement>
+				<text><![CDATA[取扱店]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="35" width="38" height="19" uuid="949d7541-75f5-483e-b454-a7537c391d06">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="IPAexg" size="10"/>
+				</textElement>
+				<text><![CDATA[電　話]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="702" y="34" width="63" height="20" uuid="3961263b-af61-4245-89a0-6d037f6c5460">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="IPAexg" size="15"/>
+				</textElement>
+				<text><![CDATA[中国銀行]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="654" y="38" width="48" height="16" uuid="8c7b1d96-7a0c-4ecd-9449-d3b66f87fcb1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="IPAexg" size="11"/>
+				</textElement>
+				<text><![CDATA[株式会社]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="82" y="3" width="500" height="28" uuid="bf202995-40eb-43bd-8deb-308a8f25cb8d">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+					<font fontName="IPAexg"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{branchName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="82" y="35" width="103" height="20" uuid="14cb6b28-73b2-415a-8428-c893500ed587">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+					<font fontName="IPAexg"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{branchPhoneNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

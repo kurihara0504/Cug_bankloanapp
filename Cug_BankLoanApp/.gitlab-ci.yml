@@ -1,0 +1,25 @@
+stages:
+  - build_stage
+  - deploy_stage
+before_script:
+  - export PATH=$PATH:/opt/apache-maven/bin
+  - export PATH=/usr/local/jdk-17.0.6/bin/:$PATH
+  - export JAVA_HOME=/usr/local/jdk-17.0.6/
+chb_build_job:
+  stage: build_stage
+  script:
+  # 前回deployで生成されたものを削除
+  - cd ./cug_bankloanapp
+  - mvn clean
+  - mvn compile
+  - mvn package -DskipTests=true
+  - mvn install -DskipTests=true
+  # warの移動
+  - cd ./target
+  - cp sp2.war /mnt/cug_deploy
+
+  tags:
+  - mf-shell
+  only:
+  - internal-test
+

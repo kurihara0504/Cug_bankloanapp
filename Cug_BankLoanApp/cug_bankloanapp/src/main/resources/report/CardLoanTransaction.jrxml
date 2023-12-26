@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CardLoanNotificationTransaction" pageWidth="842" pageHeight="595" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="37ec5ca8-705e-417a-9676-26a5f9c58153">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="issuedDate" class="java.lang.String"/>
+	<parameter name="applicantName" class="java.lang.String"/>
+	<parameter name="productName" class="java.lang.String"/>
+	<parameter name="repaymentAccountNumber" class="java.lang.String"/>
+	<parameter name="loanLimitAmount" class="java.lang.String"/>
+	<parameter name="loanInterestRate" class="java.lang.String"/>
+	<parameter name="branchName" class="java.lang.String"/>
+	<parameter name="branchPhoneNumber" class="java.lang.String"/>
+	<parameter name="accountNumber" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="transactionDate" class="java.lang.String"/>
+	<field name="loanAmount" class="java.lang.String"/>
+	<field name="repaymentAmount" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="loanBalance" class="java.lang.String"/>
+	<group name="タイトル" isReprintHeaderOnEachPage="true">
+		<groupHeader>
+			<band height="73">
+				<staticText>
+					<reportElement x="200" y="28" width="450" height="19" uuid="f4158f92-55bb-4f8a-b97f-909165645f56"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[ちゅうぎんカードローンお取引内容のお知らせ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="665" y="0" width="40" height="20" uuid="3c814221-6fb8-4984-9fa0-cbd3cedbfc3e"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<text><![CDATA[作成日]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="705" y="0" width="84" height="20" uuid="0eb8c02e-dcb7-436d-87de-a3fa16dcecf3">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{issuedDate}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Group1">
+		<groupHeader>
+			<band height="44">
+				<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1? true: false]]></printWhenExpression>
+				<staticText>
+					<reportElement x="10" y="0" width="450" height="38" uuid="fbafbb6c-23be-4ccf-b600-fd334f51498a"/>
+					<textElement>
+						<font fontName="IPAexg"/>
+					</textElement>
+					<text><![CDATA[平素は格別のお引立てに預り誠にありがとうございます。
+さて、このたびあなた様の6か月分のお取引内容を上記の通りご案内申しあげます。
+なお、ご不明な点がございましたらお手数ですがお取引店までお問い合わせください。]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="名義人" isReprintHeaderOnEachPage="true">
+		<groupHeader>
+			<band height="40">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<staticText>
+					<reportElement x="10" y="11" width="42" height="12" uuid="dd879e09-bdfb-46a2-b65d-b854bd5f09a0">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<text><![CDATA[名義人]]></text>
+				</staticText>
+				<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+					<reportElement x="52" y="7" width="738" height="20" uuid="d128c338-44bc-4be0-80f3-bbe3413bf755">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{applicantName}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="商品情報" isReprintHeaderOnEachPage="true">
+		<groupHeader>
+			<band height="74">
+				<rectangle radius="6">
+					<reportElement key="" x="10" y="0" width="348" height="60" uuid="8ca26b51-6157-4ff9-adf4-9b2a304bf5b9"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</rectangle>
+				<frame>
+					<reportElement x="250" y="30" width="108" height="15" uuid="8bf959e1-90ee-49ec-92dd-fe094d0cf213">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textField isBlankWhenNull="true">
+						<reportElement x="1" y="0" width="107" height="15" uuid="2272609d-b1d1-438b-baad-a920003b8c72">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</reportElement>
+						<box>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="IPAexg" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{accountNumber}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="250" y="45" width="108" height="15" uuid="0dc31cdf-ec46-452b-8fd5-7ed0db9e8d1c">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textField isBlankWhenNull="true">
+						<reportElement x="1" y="0" width="107" height="15" uuid="f6b13551-52fb-447e-8146-b5f470b13cbb">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</reportElement>
+						<box>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="IPAexg" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{repaymentAccountNumber}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<textField isBlankWhenNull="true">
+					<reportElement x="10" y="30" width="240" height="30" uuid="699871cf-4164-44fe-bf35-a254f41d1c9c">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{productName}]]></textFieldExpression>
+				</textField>
+				<rectangle radius="6">
+					<reportElement key="" x="490" y="0" width="300" height="60" uuid="fce8b8db-ad15-4501-bcdf-7bfd528c90d9"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</rectangle>
+				<frame>
+					<reportElement x="490" y="30" width="150" height="30" uuid="d6f9381f-6afe-4654-8d9d-0389830508dc"/>
+					<box>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textField isBlankWhenNull="true">
+						<reportElement x="1" y="0" width="148" height="30" uuid="c170015d-3539-42ae-ac6e-c5d7a520d410">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</reportElement>
+						<box>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="IPAexg" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{loanLimitAmount}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="640" y="30" width="150" height="30" uuid="ec5c5a80-f4d2-4ce8-a00b-8930fb0d4a0a"/>
+					<box>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textField isBlankWhenNull="true">
+						<reportElement x="1" y="0" width="148" height="30" uuid="81e4141a-5004-45c9-bb61-bd6a9c0d1ac4">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</reportElement>
+						<box>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="IPAexg" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{loanInterestRate}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<staticText>
+					<reportElement x="250" y="0" width="108" height="15" uuid="01baed5e-57e1-43e9-bea7-acc409e23c7f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="IPAexg"/>
+					</textElement>
+					<text><![CDATA[口座番号]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="250" y="15" width="108" height="15" uuid="fe7288b0-8598-4954-bd5d-42015754a894">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="IPAexg"/>
+					</textElement>
+					<text><![CDATA[ご返済口座番号]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="490" y="0" width="150" height="30" uuid="ede1b105-58d7-4a08-94ca-fbf2070e475d"/>
+					<box>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<text><![CDATA[貸越極度額]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="640" y="0" width="150" height="30" uuid="a05806f5-bc84-4952-a404-423e73c98205"/>
+					<box>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<text><![CDATA[ご融資利率]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="0" width="240" height="30" uuid="c764415e-ca86-434f-b3d1-7932468cdc60"/>
+					<box>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<text><![CDATA[商品名]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="一覧ヘッダー" isReprintHeaderOnEachPage="true">
+		<groupHeader>
+			<band height="30">
+				<staticText>
+					<reportElement x="10" y="0" width="89" height="30" uuid="89eead51-daf4-4ff7-b63f-81f4688d5b7c">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<text><![CDATA[日付]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="99" y="0" width="281" height="30" uuid="23cd9889-1e2d-4a1d-b1ac-d8165cb9c180">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<text><![CDATA[摘要]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="380" y="0" width="137" height="30" uuid="ac4f7595-3006-4789-a691-ced8f3ba24c9">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<text><![CDATA[お借入金額]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="517" y="0" width="137" height="30" uuid="8fdfc596-72b8-4021-8095-3d83458e26e1">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<text><![CDATA[ご返済金額]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="654" y="0" width="137" height="30" uuid="07bdde78-d446-4b9f-aac5-ca1d1d434320">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<text><![CDATA[お借入残高]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="10" y="0" width="89" height="15" uuid="0380521e-6669-4495-b3da-a196ee80d476"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement x="1" y="0" width="88" height="15" uuid="340d04c4-9325-45f8-8b80-3d16b62067df">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transactionDate}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="99" y="0" width="281" height="15" uuid="5664370d-18fc-44bb-a2e7-2db5b6001552"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement x="1" y="0" width="279" height="15" uuid="8c64cc83-a051-4ef2-be80-0b896faefe0c">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="380" y="0" width="137" height="15" uuid="3c5242d1-4771-4b8c-baa8-66a0cb8c9d08"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="120" height="15" uuid="fc741962-5993-4c94-8a06-be1f3021d53e">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{loanAmount}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="517" y="0" width="137" height="15" uuid="636d0e19-795f-42a6-89a5-2e48200d3db4"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="120" height="15" uuid="32b5a006-7216-4705-8fb7-3e9e766f4ccd">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{repaymentAmount}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="654" y="0" width="137" height="15" uuid="0ce79b63-1c69-490f-9797-6c02314e9fcc"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="120" height="15" uuid="09bb059d-58b3-4805-b56c-7ef7ec7b1f2d">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="IPAexg" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{loanBalance}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="55">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="730" y="35" width="63" height="20" uuid="3def4490-9178-4655-823c-48729439219d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="IPAexg" size="15"/>
+				</textElement>
+				<text><![CDATA[中国銀行]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="682" y="39" width="48" height="16" uuid="e25240f7-33ec-4544-a4fe-67e88c02dc61">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="IPAexg" size="11"/>
+				</textElement>
+				<text><![CDATA[株式会社]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="3" width="38" height="19" uuid="afdfd1d0-124a-4b20-93cc-0ce343a59d82">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="IPAexg" size="10"/>
+				</textElement>
+				<text><![CDATA[取扱店]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="52" y="3" width="500" height="28" uuid="7d49529e-66cf-446a-b6f8-a7cc91df1427">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="IPAexg" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{branchName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="52" y="36" width="224" height="18" uuid="11b30a78-ab2a-4fb5-84a8-3f98e0f47530">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="IPAexg" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{branchPhoneNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="36" width="38" height="19" uuid="840f3556-0c91-47c5-a8a1-a2bf07900881">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="IPAexg" size="10"/>
+				</textElement>
+				<text><![CDATA[電　話]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="708" y="3" width="85" height="19" uuid="6f4f9a65-30c9-4153-9677-5bf2ecc49e02">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="html">
+					<font fontName="IPAexg" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
